@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap" rel="stylesheet">
+    <title>Geonames Testing</title>
+</head>
+
+<body>
+    <form id="main-form">
+        <div>
+            <label for="city">Where are you heading!</label>
+            <input type="text" id="city" placeholder="city">
+        </div>
+        <div>
+            <label for="date-input">And when will it be?</label>
+            <input type="date" id="date-input" max="">
+        </div>
+        <input type="submit" id="submit-btn">
+
+    </form>
+
+    <div id="op-div">
+        <ul>
+            <img src="" id="weather-icon">
+            <li id="temp-max">Enter a city name!</li>
+            <li id="temp-min"></li>
+        </ul>
+        <img src="" id="pic">
+    </div>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
